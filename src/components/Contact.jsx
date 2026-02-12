@@ -12,34 +12,53 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Check if EmailJS is configured
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+        const formData = new FormData(e.target);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+
+        // Fallback to mailto if EmailJS is not configured
+        if (!serviceId || !templateId || !publicKey) {
+            const subject = `Contact Form Submission: ${name}`;
+            const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+            window.location.href = `mailto:info@bloomsgala.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            return;
+        }
+
+        // Use EmailJS if configured
         setIsSubmitting(true);
         setSubmitStatus(null);
 
-        const formData = new FormData(e.target);
         const templateParams = {
-            from_name: formData.get('name'),
-            from_email: formData.get('email'),
-            message: formData.get('message'),
+            from_name: name,
+            from_email: email,
+            message: message,
             to_email: 'info@bloomsgala.net'
         };
 
         try {
             await emailjs.send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                serviceId,
+                templateId,
                 templateParams,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                publicKey
             );
-            
+
             setSubmitStatus('success');
             e.target.reset();
-            
+
             // Clear success message after 5 seconds
             setTimeout(() => setSubmitStatus(null), 5000);
         } catch (error) {
             console.error('Email sending failed:', error);
             setSubmitStatus('error');
-            
+
             // Clear error message after 5 seconds
             setTimeout(() => setSubmitStatus(null), 5000);
         } finally {
@@ -131,7 +150,7 @@ const Contact = () => {
                                 disabled={isSubmitting}
                             ></textarea>
                         </div>
-                        
+
                         {submitStatus === 'success' && (
                             <div style={{
                                 padding: '12px',
@@ -144,7 +163,7 @@ const Contact = () => {
                                 ✓ Message sent successfully! We'll get back to you soon.
                             </div>
                         )}
-                        
+
                         {submitStatus === 'error' && (
                             <div style={{
                                 padding: '12px',
@@ -157,9 +176,9 @@ const Contact = () => {
                                 ✗ Failed to send message. Please try again or email us directly.
                             </div>
                         )}
-                        
-                        <button 
-                            type="submit" 
+
+                        <button
+                            type="submit"
                             className="btn-primary"
                             disabled={isSubmitting}
                         >
