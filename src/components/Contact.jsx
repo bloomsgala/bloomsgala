@@ -1,10 +1,51 @@
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
     const { t } = useLanguage();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        const formData = new FormData(e.target);
+        const templateParams = {
+            from_name: formData.get('name'),
+            from_email: formData.get('email'),
+            message: formData.get('message'),
+            to_email: 'info@bloomsgala.net'
+        };
+
+        try {
+            await emailjs.send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                templateParams,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            );
+            
+            setSubmitStatus('success');
+            e.target.reset();
+            
+            // Clear success message after 5 seconds
+            setTimeout(() => setSubmitStatus(null), 5000);
+        } catch (error) {
+            console.error('Email sending failed:', error);
+            setSubmitStatus('error');
+            
+            // Clear error message after 5 seconds
+            setTimeout(() => setSubmitStatus(null), 5000);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     return (
         <section className="section-padding contact-section" id="contact">
@@ -61,18 +102,7 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.4 }}
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            const formData = new FormData(e.target);
-                            const name = formData.get('name');
-                            const email = formData.get('email');
-                            const message = formData.get('message');
-
-                            const subject = `Contact Form Submission: ${name}`;
-                            const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-
-                            window.location.href = `mailto:info@bloomsgala.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                        }}
+                        onSubmit={handleSubmit}
                     >
                         <div className="form-group">
                             <input
@@ -80,6 +110,7 @@ const Contact = () => {
                                 name="name"
                                 placeholder={t('contact.form.name')}
                                 required
+                                disabled={isSubmitting}
                             />
                         </div>
                         <div className="form-group">
@@ -88,6 +119,7 @@ const Contact = () => {
                                 name="email"
                                 placeholder={t('contact.form.email')}
                                 required
+                                disabled={isSubmitting}
                             />
                         </div>
                         <div className="form-group">
@@ -96,9 +128,43 @@ const Contact = () => {
                                 placeholder={t('contact.form.message')}
                                 rows="5"
                                 required
+                                disabled={isSubmitting}
                             ></textarea>
                         </div>
-                        <button type="submit" className="btn-primary">{t('contact.form.btn')}</button>
+                        
+                        {submitStatus === 'success' && (
+                            <div style={{
+                                padding: '12px',
+                                marginBottom: '16px',
+                                backgroundColor: '#10b981',
+                                color: 'white',
+                                borderRadius: '8px',
+                                textAlign: 'center'
+                            }}>
+                                ✓ Message sent successfully! We'll get back to you soon.
+                            </div>
+                        )}
+                        
+                        {submitStatus === 'error' && (
+                            <div style={{
+                                padding: '12px',
+                                marginBottom: '16px',
+                                backgroundColor: '#ef4444',
+                                color: 'white',
+                                borderRadius: '8px',
+                                textAlign: 'center'
+                            }}>
+                                ✗ Failed to send message. Please try again or email us directly.
+                            </div>
+                        )}
+                        
+                        <button 
+                            type="submit" 
+                            className="btn-primary"
+                            disabled={isSubmitting}
+                        >
+                            {isSubmitting ? 'Sending...' : t('contact.form.btn')}
+                        </button>
                     </motion.form>
                 </div>
             </div>
