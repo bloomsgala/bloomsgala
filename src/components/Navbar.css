@@ -1,0 +1,130 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 2rem 0;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    /* Gradient to make text readable even when transparent */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    /* Solid when scrolled */
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styles moved to index.css */
+
+.desktop-menu {
+    display: none;
+    align-items: center;
+}
+
+.nav-link {
+    margin: 0 1.5rem;
+    font-size: 1.1rem;
+    /* Larger font */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    /* Bolder */
+    color: var(--color-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Shadow for pop */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-gold);
+    transform: translateY(-2px);
+}
+
+.lang-btn {
+    margin: 0 1rem;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    /* Thicker border */
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Semi-transparent bg */
+    backdrop-filter: blur(5px);
+}
+
+.lang-btn:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+
+.mobile-toggle {
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    /* right/left handled by motion dir prop or conditional logic */
+    width: 70%;
+    height: 100vh;
+    background-color: var(--color-surface);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* RTL overrides for mobile menu positioning will be handled by logic or simply defaulting to one side */
+[dir="rtl"] .mobile-menu {
+    right: auto;
+    left: 0;
+}
+
+[dir="ltr"] .mobile-menu {
+    left: auto;
+    right: 0;
+}
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mobile-links a {
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.mobile-lang-btn {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    .desktop-menu {
+        display: flex;
+    }
+
+    .mobile-toggle {
+        display: none;
+    }
+}
