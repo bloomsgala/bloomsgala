@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
@@ -80,13 +80,7 @@ const Contact = () => {
                 </motion.div>
 
                 <div className="contact-content">
-                    <motion.div
-                        className="contact-info"
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                    >
+                    <div className="contact-info">
                         <h3>{t('contact.info_title')}</h3>
                         <div className="info-item">
                             <MapPin className="icon" />
@@ -94,26 +88,34 @@ const Contact = () => {
                         </div>
                         <div className="info-item">
                             <Phone className="icon" />
-                            <p>
+                            <p style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <a
+                                    href="tel:+966538402532"
+                                    className="contact-link"
+                                    dir="ltr"
+                                    style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
+                                >
+                                    +966 53 840 2532
+                                </a>
                                 <a
                                     href="https://wa.me/966538402532"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="contact-link"
+                                    style={{ display: 'inline-flex', alignItems: 'center' }}
+                                    title="WhatsApp"
                                 >
-                                    +966 53 840 2532
+                                    <MessageCircle size={20} style={{ color: '#25D366' }} />
                                 </a>
                             </p>
                         </div>
                         <div className="info-item">
                             <Mail className="icon" />
-                            <p>
-                                <a href="mailto:info@bloomsgala.net" className="contact-link">
-                                    info@bloomsgala.net
-                                </a>
+                            <p style={{ userSelect: 'all', cursor: 'text' }}>
+                                info@bloomsgala.net
                             </p>
                         </div>
-                    </motion.div>
+                    </div>
 
                     <motion.form
                         className="contact-form"
