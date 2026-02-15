@@ -14,9 +14,6 @@ const Footer = () => {
                             <img src="/logo-brand.png" alt="BloomsGala Logo" className="logo-image" style={{ height: '100px' }} />
                         </div>
                         <p className="footer-tagline">{t('footer.tagline')}</p>
-                        <p className="footer-reach" style={{ fontSize: '0.8rem', color: 'var(--color-gold)', letterSpacing: '1px', textTransform: 'uppercase' }}>
-                            {t('footer.reach')}
-                        </p>
                         <a href="mailto:info@bloomsgala.net" className="footer-email">
                             <Mail size={16} />
                             <span>info@bloomsgala.net</span>

@@ -156,23 +156,28 @@ button {
 
 /* Global Button Styles */
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand-light) 100%);
+  background: rgba(74, 74, 74, 0.5);
+  /* 50% opacity brand grey */
   color: var(--color-white);
   padding: 1rem 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  /* Added for a more premium look */
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-  border-color: var(--color-gold);
-  background: linear-gradient(135deg, var(--color-brand-light) 0%, var(--color-brand) 100%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  background: rgba(197, 160, 89, 0.6);
+  /* Gold on hover with some opacity */
+  border-color: var(--color-white);
+  color: var(--color-white);
 }
 
 @media (max-width: 768px) {

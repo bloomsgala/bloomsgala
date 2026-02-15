@@ -67,22 +67,6 @@
     letter-spacing: 0.5px;
 }
 
-.btn-primary {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background-color: var(--color-white);
-    color: var(--color-dark);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 2px solid var(--color-white);
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: transparent;
-    color: var(--color-white);
-}
 
 @media (min-width: 768px) {
     .hero h1 {
