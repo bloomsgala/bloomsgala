@@ -27,7 +27,7 @@ const SEO = ({ title, description, keywords, image, url }) => {
             "latitude": "24.7136",
             "longitude": "46.6753"
         },
-        "telephone": "+966538402532",
+        "telephone": "+966579548399",
         "priceRange": "$$$"
     };
 

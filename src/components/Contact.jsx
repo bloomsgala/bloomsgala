@@ -90,15 +90,15 @@ const Contact = () => {
                             <Phone className="icon" />
                             <p style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <a
-                                    href="tel:+966538402532"
+                                    href="tel:+966579548399"
                                     className="contact-link"
                                     dir="ltr"
                                     style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
                                 >
-                                    +966 53 840 2532
+                                    +966 57 954 8399
                                 </a>
                                 <a
-                                    href="https://wa.me/966538402532"
+                                    href="https://wa.me/966579548399"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="contact-link"
