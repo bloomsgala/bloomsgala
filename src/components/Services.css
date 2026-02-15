@@ -1,5 +1,7 @@
 .services-section {
     background-color: var(--color-dark);
+    background-image: var(--pattern-premium);
+    background-size: var(--pattern-size);
     position: relative;
 }
 
@@ -36,11 +38,11 @@
 
 .service-card:hover {
     transform: translateY(-10px);
-    border-color: var(--color-gold);
+    border-color: var(--color-white);
 }
 
 .service-icon {
-    color: var(--color-gold);
+    color: var(--color-white);
     margin-bottom: 1.5rem;
 }
 

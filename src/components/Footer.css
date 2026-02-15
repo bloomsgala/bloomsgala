@@ -40,7 +40,7 @@
 }
 
 .footer-email:hover {
-    color: var(--color-gold);
+    color: var(--color-white);
 }
 
 .footer-links h3,
@@ -59,7 +59,7 @@
 }
 
 .footer-links a:hover {
-    color: var(--color-gold);
+    color: var(--color-white);
 }
 
 .social-icons {
@@ -73,7 +73,7 @@
 }
 
 .social-icons a:hover {
-    color: var(--color-gold);
+    color: var(--color-white);
 }
 
 .footer-bottom {

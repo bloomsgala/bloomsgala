@@ -13,7 +13,7 @@ const SEO = ({ title, description, keywords, image, url }) => {
         "@type": "EventPlanner",
         "name": "BloomsGala",
         "url": siteUrl,
-        "logo": `${siteUrl}/logo.png`, // You should add a logo file to public folder
+        "logo": `${siteUrl}/logo.jpg`, // Use the new brand logo
         "image": image || defaultImage,
         "description": description || defaultDescription,
         "address": {

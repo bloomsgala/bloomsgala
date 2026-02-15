@@ -11,11 +11,11 @@
 }
 
 .navbar.scrolled {
-    background: rgba(10, 10, 10, 0.95);
-    /* Solid when scrolled */
-    padding: 1rem 0;
+    background: var(--color-brand);
+    /* Solid brand grey when scrolled */
+    padding: 0.5rem 0;
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .nav-content {
@@ -46,7 +46,7 @@
 }
 
 .nav-link:hover {
-    color: var(--color-gold);
+    color: var(--color-brand);
     transform: translateY(-2px);
 }
 
@@ -68,8 +68,8 @@
 }
 
 .lang-btn:hover {
-    border-color: var(--color-gold);
-    color: var(--color-gold);
+    border-color: var(--color-brand);
+    color: var(--color-brand);
 }
 
 .mobile-toggle {

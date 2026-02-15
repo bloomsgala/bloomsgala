@@ -1,6 +1,7 @@
 import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Partners from './components/Partners';
 import About from './components/About';
 import Services from './components/Services';
 import Gallery from './components/Gallery';
@@ -17,6 +18,7 @@ function App() {
         <SEO />
         <Navbar />
         <Hero />
+        <Partners />
         <About />
         <Services />
         <Gallery />

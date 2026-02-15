@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --color-gold: #d4af37;
-  --color-gold-light: #f3cf55;
-  --color-dark: #0a0a0a;
-  --color-surface: #1a1a1a;
+  --color-brand: #4a4a4a;
+  /* Logo grey */
+  --color-brand-light: #666666;
+  --color-dark: #121212;
+  --color-surface: #1e1e1e;
   --color-surface-light: #2a2a2a;
-  --color-text: #f9f9f9;
-  --color-text-muted: #d1d1d1;
+  --color-text: #ffffff;
+  --color-text-muted: #b0b0b0;
   --color-white: #ffffff;
+  --color-gold: #c5a059;
+  /* Premium Corporate Gold */
 
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Lato', sans-serif;
@@ -22,6 +25,12 @@
 
   /* Height of Navbar + some padding */
   --scroll-offset: 120px;
+
+  /* Premium Pattern: Elegant Diamond Crosshatch */
+  --pattern-premium:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  --pattern-size: 60px 60px;
 }
 
 html {
@@ -41,6 +50,26 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Matte Noise Texture Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.bg-pattern {
+  background-image: var(--pattern-premium);
+  background-size: var(--pattern-size);
 }
 
 h1,
@@ -50,8 +79,10 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  color: var(--color-gold);
-  line-height: 1.2;
+  color: var(--color-white);
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 a {
@@ -101,57 +132,51 @@ button {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gold);
+  background: var(--color-brand);
 }
 
 /* GLOBAL LOGO STYLES */
 .logo-container {
   display: flex;
-  flex-direction: column;
-  color: var(--color-white);
-  line-height: 1;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-.logo-blooms {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 0px;
-  margin-bottom: -0.3rem;
-}
-
-.logo-row-2 {
-  display: flex;
   align-items: center;
-  gap: 0.5rem;
-  width: 100%;
+  cursor: pointer;
+  width: fit-content;
 }
 
-.logo-gala {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 400;
+.logo-image {
+  height: 120px;
+  /* Big and premium */
+  width: auto;
+  object-fit: contain;
+  /* Make the logo white and handle non-transparent edges */
+  filter: invert(1) brightness(2);
+  mix-blend-mode: screen;
+  transition: all 0.3s ease;
 }
 
-.logo-line {
-  flex-grow: 1;
-  height: 1px;
-  background-color: var(--color-white);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  margin-top: 0.3rem;
-}
-
-.logo-tagline {
-  font-family: var(--font-body);
-  font-size: 0.6rem;
-  letter-spacing: 3px;
+/* Global Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand-light) 100%);
+  color: var(--color-white);
+  padding: 1rem 2.5rem;
+  font-weight: 700;
   text-transform: uppercase;
-  text-align: right;
-  width: 100%;
-  margin-top: 0.3rem;
-  display: flex;
-  justify-content: flex-end;
-  /* Align right to match the image structure usually */
+  letter-spacing: 2px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  border-color: var(--color-gold);
+  background: linear-gradient(135deg, var(--color-brand-light) 0%, var(--color-brand) 100%);
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    height: 80px;
+  }
 }

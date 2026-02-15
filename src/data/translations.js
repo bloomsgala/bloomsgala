@@ -9,188 +9,206 @@ export const translations = {
             lang: "عربي"
         },
         hero: {
-            title_prefix: "Creating Unforgettable",
-            title_accent: "Moments",
-            subtitle: "Premier Event Management & Wedding Styling",
-            cta: "Start Planning"
+            title_prefix: "Mastering Corporate",
+            title_accent: "Excellence",
+            subtitle: "Professional Event Management & Technical Production",
+            cta: "Get a Quote"
+        },
+        partners: {
+            sectors: [
+                { name: "Government & Diplomatic", desc: "Protocol-grade management" },
+                { name: "Global Tech Summits", desc: "Technical production excellence" },
+                { name: "Financial Forums", desc: "High-end corporate logistics" },
+                { name: "Luxury Entertainment", desc: "Elite gala experiences" }
+            ]
         },
         about: {
-            title: "Crafting Dreams into Reality",
-            subtitle: "Premier Event Management in Saudi Arabia",
-            p1: "BloomsGala is more than just an event planning company; we are architects of memories. With over a decade of experience in the heart of Saudi Arabia, we specialize in creating breathtaking weddings, corporate gatherings, and exhibitions that leave a lasting impression.",
-            p2: "Our team of dedicated professionals combines creativity with precision logistics to ensure every detail is flawless. From the initial concept to the final curtain call, we are committed to excellence.",
-            cta: "Read Our Story",
+            title: "Engineering Expert Experiences",
+            subtitle: "Premier Corporate Event Management in Saudi Arabia",
+            p1: "BloomsGala is a leader in technical event production and corporate management. With over a decade of experience in the heart of Saudi Arabia, we specialize in creating high-impact conferences, international exhibitions, and grand corporate galas that align with your business objectives.",
+            p2: "Our core values—Precision, Innovation, and Discretion—ensure every project is executed with clinical excellence. We deliver industrial-grade solutions for the most demanding global brands.",
+            cta: "Our Technical Portfolio",
             years: "15+",
-            years_text: "Years of Excellence"
+            years_text: "Years of Professionalism"
         },
         services: {
-            title: "Our Expertise",
-            subtitle: "Curating exceptional experiences with style",
+            title: "Our Core Competencies",
+            subtitle: "Delivering industrial-grade event solutions",
             weddings: {
-                title: "Wedding Decorations",
-                desc: "Transform your special day into a fairytale with our bespoke wedding styling and floral arrangements."
+                title: "Technical Production",
+                desc: "High-spec sound reaching every corner, dramatic lighting designs, and interactive LED solutions for any venue."
             },
             corporate: {
-                title: "Corporate Events",
-                desc: "Professional and impactful event management for product launches, conferences, and galas."
+                title: "Corporate Conferences",
+                desc: "End-to-end management for summits, seminars, and product launches with seamless execution."
             },
             exhibitions: {
-                title: "Exhibition Stands",
-                desc: "Innovative designs that captivate your audience and showcase your brand with elegance."
+                title: "Exhibition Environments",
+                desc: "Custom-built stands and immersive booth designs that showcase your brand's innovation."
             },
             sound: {
-                title: "Sound & Light",
-                desc: "State-of-the-art audiovisual production to set the perfect mood for any occasion."
+                title: "Live Event Support",
+                desc: "Real-time technical coordination and stage management for large-scale professional gatherings."
             }
         },
         gallery: {
-            title: "Our Portfolio",
-            subtitle: "Moments we've crafted",
-            view: "View Project",
+            title: "Featured Projects",
+            subtitle: "Professional implementations",
+            view: "See Details",
             items: [
-                { title: "Royal Wedding in Riyadh", img: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80" }, // Luxury Hall
-                { title: "Luxury Corporate Gala", img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" }, // Conference/Gala
-                { title: "Elegant Outdoor Reception", img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" }, // Table setting
-                { title: "Tech Exhibition Stand", img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" }, // Corporate meeting/event
-                { title: "Private VIP Dinner", img: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" }, // Luxury Dining (New)
-                { title: "Traditional Henna Night", img: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" } // Flowers/Details
+                { title: "International Trade Summit", img: "/HERO%20PICTURES/20x30-Trade-Show-Booth-at-NYSCC-Suppliers-Day-Wilmar.webp" },
+                { title: "Executive Leadership Forum", img: "/HERO%20PICTURES/corporate-meeting.jpg" },
+                { title: "Global Energy Conference", img: "/HERO%20PICTURES/corporate-event-1920-x-960-wallpaper-kxfymzln0ikz8pp7.jpg" },
+                { title: "Tech Innovation Expo", img: "/HERO%20PICTURES/diverse-crowd-exploring-interactive-tech-conference-expo-hall-innovative-exhibits-409010868.webp" },
+                { title: "Concert Series Production", img: "/HERO%20PICTURES/modern-led-laser-lighting-equipment-illuminating-outdoor-concert-stage-modern-led-laser-lighting-equipment-illuminating-403599790.webp" },
+                { title: "Professional Industry Seminar", img: "/HERO%20PICTURES/PXL_20211012_151827214-1024x768.jpg" }
             ]
         },
         testimonials: {
-            title: "Client Love",
-            subtitle: "What our clients say about us",
+            title: "Corporate Trust",
+            subtitle: "What industry leaders say about us",
             reviews: [
                 {
-                    name: "Sarah & Ahmed",
-                    role: "Wedding Couple",
-                    text: "BloomsGala made our wedding unforgettable with stunning decorations and flawless management. Highly recommended!"
+                    name: "Global Energy Forum",
+                    role: "Conference Director",
+                    text: "BloomsGala delivered a flawless technical setup for our 3-day summit. Their attention to sound and lighting was world-class."
                 },
                 {
-                    name: "TechCorp Inc.",
-                    role: "Corporate Client",
-                    text: "The professional team at BloomsGala handled our annual conference with precision and style. Truly exceptional service."
+                    name: "TechCorp Global",
+                    role: "Marketing Head",
+                    text: "The exhibition stand designed and built by BloomsGala was the highlight of the expo. Professional, efficient, and innovative."
                 },
                 {
-                    name: "Layla M.",
-                    role: "Private Party",
-                    text: "Incredible attention to detail. The floral arrangements were breathtaking and the lighting set the perfect mood."
+                    name: "Regional Finance Group",
+                    role: "Executive VP",
+                    text: "Precision logistics and a deep understanding of corporate aesthetics. They are our go-to partner for all major events."
                 }
             ]
         },
         contact: {
-            title: "Get in Touch",
-            subtitle: "Let's plan your next event",
-            info_title: "Contact Information",
+            title: "Executive Consultation",
+            subtitle: "Engage with our senior production experts",
+            info_title: "HQ Information",
             address: "Riyadh, Saudi Arabia",
             form: {
-                name: "Your Name",
-                email: "Your Email",
-                message: "Tell us about your event",
-                btn: "Send Message"
+                name: "Full Name",
+                email: "Corporate Email",
+                message: "Project Requirements & Scope",
+                btn: "Begin Consultation"
             }
         },
         footer: {
-            tagline: "Elevating events to an art form.",
-            links_title: "Quick Links",
-            social_title: "Follow Us",
-            rights: "All rights reserved."
+            tagline: "Leading the future of professional event production.",
+            links_title: "Executive Sitemap",
+            social_title: "Professional Network",
+            reach: "Serving the Middle East & Beyond",
+            rights: "All rights reserved professionally."
         }
     },
     ar: {
         nav: {
             home: "الرئيسية",
-            about: "من نحن",
-            services: "خدماتنا",
+            about: "عن الشركة",
+            services: "الخدمات",
             portfolio: "معرض الأعمال",
             contact: "اتصل بنا",
             lang: "English"
         },
         hero: {
-            title_prefix: "حيث يلتقي الخيال",
-            title_accent: "بالواقع",
-            subtitle: "نبتكر لك عالماً من الفخامة والجمال في كل مناسبة",
-            cta: "تواصل معنا الآن"
+            title_prefix: "هندسة الفعاليات",
+            title_accent: "باحترافية",
+            subtitle: "إدارة الفعاليات المؤسسية والإنتاج الفني المتكامل",
+            cta: "اطلب عرض سعر"
+        },
+        partners: {
+            sectors: [
+                { name: "القطاع الحكومي والدبلوماسي", desc: "إدارة فعاليات بمستوى البروتوكول" },
+                { name: "قمم التكنولوجيا العالمية", desc: "إتقان الإنتاج الفني والتقني" },
+                { name: "المنتدات المالية", desc: "خدمات لوجستية مؤسسية راقية" },
+                { name: "الترفيه الفاخر", desc: "تجارب احتفالية نخبوية" }
+            ]
         },
         about: {
-            title: "شغفنا،، حكاية لا تُنسى",
-            subtitle: "رواد تنظيم الفعاليات والمناسبات الفاخرة في المملكة",
-            p1: "في بلومز جالا، لا نكتفي بتنظيم الفعاليات، بل نصنع تجارب خالدة. بخبرة تمتد لأكثر من عقد في الرياض، نسخر كل إمكانياتنا لتحويل حفلات الزفاف، والمؤتمرات، والمعارض إلى تحف فنية تبهر الحضور وترسخ في الذاكرة.",
-            p2: "فريقنا من المبدعين يدقق في أصغر التفاصيل، من تنسيق الزهور الساحر إلى هندسة الإضاءة الدرامية، لنضمن لك مناسبة تتحدث عنها المدينة. نحن نؤمن بأن التميز ليس خياراً، بل هو معيارنا الوحيد.",
-            cta: "اكتشف رحلتنا",
+            title: "نحو آفاق جديدة من الإتقان",
+            subtitle: "رواد تنظيم الفعاليات المؤسسية في المملكة",
+            p1: "تعد بلومز جالا رائدة في مجال الإنتاج الفني وإدارة الفعاليات الكبرى. بخبرة تمتد لأكثر من عقد في الرياض، نتخصص في تنظيم المؤتمرات الدولية، المعارض التجارية، والاحتفالات المؤسسية الضخمة التي تحقق أهدافكم الاستراتيجية.",
+            p2: "قيمنا الجوهرية—الدقة، الابتكار، والسرية—تضمن تنفيذ كل مشروع بامتياز احترافي. نحن نقدم حلولاً متكاملة للعلامات التجارية العالمية الأكثر طلباً.",
+            cta: "معرض أعمالنا التقني",
             years: "+15",
-            years_text: "عاماً من الإبداع"
+            years_text: "عاماً من الاحتراف"
         },
         services: {
-            title: "خدماتنا الحصرية",
-            subtitle: "نقدم لك الأفضل، لأنك تستحق الاستثناء",
+            title: "قدراتنا الأساسية",
+            subtitle: "حلول تقنية رائدة للفعاليات الكبرى",
             weddings: {
-                title: "تصميم حفلات الزفاف",
-                desc: "نحكي قصة حبكم من خلال تصاميم خيالية، كوش افراح ملكية، وتنسيقات زهور تخطف الأنفاس."
+                title: "الإنتاج الفني والتقني",
+                desc: "أنظمة صوت محيطية، تصاميم إضاءة درامية، وحلول شاشات LED تفاعلية تناسب كافة المساحات."
             },
             corporate: {
-                title: "الفعاليات المؤسسية",
-                desc: "تنظيم احترافي للمؤتمرات وإطلاق المنتجات، يعكس هوية شركتكم بأعلى معايير الجودة."
+                title: "المؤتمرات والقمم",
+                desc: "إدارة شاملة للمؤتمرات والندوات وإطلاق المنتجات مع ضمان التنفيذ السلس والاحترافي."
             },
             exhibitions: {
-                title: "تجهيز المعارض",
-                desc: "بناء أجنحة عرض مبتكرة تجمع بين الوظيفة والجمال لجذب الزوار وإبراز علامتك التجارية."
+                title: "أجنحة المعارض",
+                desc: "تصميم وبناء أجنحة عرض مبتكرة تعزز هوية علامتكم التجارية وتجذب الزوار بفعالية."
             },
             sound: {
-                title: "الإنتاج الفني",
-                desc: "حلول متكاملة للصوت والإضاءة والشاشات بأحدث التقنيات العالمية لضمان تجربة حسية متكاملة."
+                title: "الدعم الفني المباشر",
+                desc: "تنسيق تقني وإدارة المسرح للفعاليات المباشرة الكبرى بأعلى معايير الجودة العالمية."
             }
         },
         gallery: {
-            title: "لمساتنا",
-            subtitle: "جزء من إبداعاتنا السابقة",
+            title: "مشاريعنا المختارة",
+            subtitle: "تنفيذ احترافي على أرض الواقع",
             view: "تفاصيل المشروع",
             items: [
-                { title: "حفل زفاف ملكي في الرياض", img: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80" },
-                { title: "حفل عشاء مؤسسي فاخر", img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" },
-                { title: "استقبال خارجي أنيق", img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" },
-                { title: "جناح معرض تقني", img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" },
-                { title: "عشاء كبار الشخصيات", img: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" },
-                { title: "ليلة حناء تراثية", img: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" }
+                { title: "قمة التجارة الدولية", img: "/HERO%20PICTURES/20x30-Trade-Show-Booth-at-NYSCC-Suppliers-Day-Wilmar.webp" },
+                { title: "منتدى القيادة التنفيذية", img: "/HERO%20PICTURES/corporate-meeting.jpg" },
+                { title: "مؤتمر الطاقة العالمي", img: "/HERO%20PICTURES/corporate-event-1920-x-960-wallpaper-kxfymzln0ikz8pp7.jpg" },
+                { title: "معرض الابتكار التقني", img: "/HERO%20PICTURES/diverse-crowd-exploring-interactive-tech-conference-expo-hall-innovative-exhibits-409010868.webp" },
+                { title: "إنتاج سلسلة حفلات موسيقية", img: "/HERO%20PICTURES/modern-led-laser-lighting-equipment-illuminating-outdoor-concert-stage-modern-led-laser-lighting-equipment-illuminating-403599790.webp" },
+                { title: "ندوة القطاع الاحترافي", img: "/HERO%20PICTURES/PXL_20211012_151827214-1024x768.jpg" }
             ]
         },
         testimonials: {
-            title: "شهادات نعتز بها",
-            subtitle: "كلمات عملائنا سر نجاحنا",
+            title: "ثقة الشركات",
+            subtitle: "ماذا يقول شركاء النجاح عنا",
             reviews: [
                 {
-                    name: "عبدالله ومنيرة",
-                    role: "حفل زفاف",
-                    text: "كلمة شكر لا تفيكم حقكم. كان الحفل خيالياً بكل ما تعنيه الكلمة، الديكور، التنظيم، التعامل الراقي.. شكراً بلومز جالا."
+                    name: "منتدى الطاقة العالمي",
+                    role: "مدير المؤتمر",
+                    text: "قدمت بلومز جالا تجهيزاً تقنياً مثالياً لقمة الثلاثة أيام. اهتمامهم بأدق تفاصيل الصوت والإضاءة كان على مستوى عالمي."
                 },
                 {
-                    name: "شركة المستقبل",
-                    role: "جهة حكومية",
-                    text: "احترافية عالية في التعامل وسرعة في الإنجاز. المؤتمر ظهر بصورة مشرفة تليق بضيوفنا."
+                    name: "تك كورب العالمية",
+                    role: "رئيس التسويق",
+                    text: "كان جناح العرض المصمم والمنفذ من قبل بلومز جالا هو الأبرز في المعرض. احترافية وابتكار وسرعة في الإنجاز."
                 },
                 {
-                    name: "أم فيصل",
-                    role: "استقبال خاص",
-                    text: "أبدعتم في التفاصيل الدقيقة، الزهور كانت طازجة ورائعة والتنسيق العام للمكان أبهر جميع المدعوين."
+                    name: "مجموعة التمويل الإقليمية",
+                    role: "نائب رئيس تنفيذي",
+                    text: "نحن نعتمد عليهم كشريك استراتيجي في كافة فعالياتنا الكبرى نظراً لدقة خدماتهم اللوجستية وفهمهم العميق لمتطلبات الشركات."
                 }
             ]
         },
         contact: {
-            title: "ابدأ رحلتك معنا",
-            subtitle: "نحن بانتظار استسفاراتكم لتحويل أفكاركم إلى واقع",
-            info_title: "بيانات التواصل",
+            title: "استشارة تنفيذية",
+            subtitle: "تواصل مع خبرائنا في الإنتاج للمشاريع الكبرى",
+            info_title: "المقر الرئيسي",
             address: "الرياض، المملكة العربية السعودية",
             form: {
-                name: "الاسم الكريم",
-                email: "البريد الإلكتروني",
-                message: "تفاصيل المناسبة",
-                btn: "إرسال الطلب"
+                name: "الاسم الكامل",
+                email: "البريد الإلكتروني للعمل",
+                message: "متطلبات المشروع ونطاق العمل",
+                btn: "بدء الاستشارة"
             }
         },
         footer: {
-            tagline: "فن صياغة اللحظات الثمينة.",
-            links_title: "القائمة",
-            social_title: "تابعنا على منصاتنا",
-            rights: "كافة الحقوق محفوظة."
+            tagline: "نصنع مستقبل تنظيم الفعاليات الاحترافية.",
+            links_title: "خريطة الموقع التنفيذية",
+            social_title: "شبكتنا المهنية",
+            reach: "نخدم الشرق الأوسط وما وراءه",
+            rights: "كافة الحقوق محفوظة باحترافية."
         }
     }
 };

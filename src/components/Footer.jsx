@@ -11,14 +11,12 @@ const Footer = () => {
                 <div className="footer-content">
                     <div className="footer-brand">
                         <div className="logo-container">
-                            <div className="logo-blooms">Blooms</div>
-                            <div className="logo-row-2">
-                                <span className="logo-gala">Gala</span>
-                                <div className="logo-line"></div>
-                            </div>
-                            <div className="logo-tagline">WEDDINGS & EVENTS</div>
+                            <img src="/logo-brand.png" alt="BloomsGala Logo" className="logo-image" style={{ height: '100px' }} />
                         </div>
                         <p className="footer-tagline">{t('footer.tagline')}</p>
+                        <p className="footer-reach" style={{ fontSize: '0.8rem', color: 'var(--color-gold)', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                            {t('footer.reach')}
+                        </p>
                         <a href="mailto:info@bloomsgala.net" className="footer-email">
                             <Mail size={16} />
                             <span>info@bloomsgala.net</span>
@@ -71,7 +69,7 @@ const Footer = () => {
                     <p>&copy; {new Date().getFullYear()} BloomsGala. {t('footer.rights')}</p>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 };
 

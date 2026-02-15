@@ -34,12 +34,7 @@ const Navbar = () => {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container nav-content">
                 <a href="#" className="logo-container">
-                    <div className="logo-blooms">Blooms</div>
-                    <div className="logo-row-2">
-                        <span className="logo-gala">Gala</span>
-                        <div className="logo-line"></div>
-                    </div>
-                    <div className="logo-tagline">WEDDINGS & EVENTS</div>
+                    <img src="/logo-brand.png" alt="BloomsGala Logo" className="logo-image" />
                 </a>
 
                 <div className="desktop-menu">
