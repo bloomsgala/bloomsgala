@@ -16,7 +16,7 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <img src="/HERO PICTURES/Corporate%20Lecture%20and%20LED%20Screen.png" alt="Executive Event Production" />
+                        <img src="/HERO PICTURES/corporate-meeting.jpg" alt="Executive Event Production" />
                         <div className={`experience-badge ${language === 'ar' ? 'badge-rtl' : ''}`}>
                             <span className="years">{t('about.years')}</span>
                             <span className="text">{t('about.years_text')}</span>
