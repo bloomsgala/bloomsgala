@@ -36,10 +36,6 @@ const Testimonials = () => {
                                 ))}
                             </div>
                             <p className="review-text">"{review.text}"</p>
-                            <div className="reviewer-info">
-                                <h4>{review.name}</h4>
-                                <span>{review.role}</span>
-                            </div>
                         </motion.div>
                     ))}
                 </div>

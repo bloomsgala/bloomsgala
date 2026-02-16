@@ -4,7 +4,7 @@ import { translations } from '../data/translations';
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-    const [language, setLanguage] = useState('ar'); // Default to Arabic
+    const [language, setLanguage] = useState('en'); // Default to English
 
     useEffect(() => {
         document.dir = language === 'ar' ? 'rtl' : 'ltr';
