@@ -49,7 +49,7 @@ export const translations = {
                 },
                 {
                     id: 3,
-                    image: "/our project/lgf-dJo464zJORu69Z8j.avif",
+                    image: "/portfolio/wedding.jpeg",
                     title: "Wedding Decorations",
                     description: "Our wedding decoration projects showcase creativity and elegance, ensuring your special day is unforgettable with stunning designs tailored to your vision and preferences.",
                     experience_title: "Elegance",
@@ -189,7 +189,7 @@ export const translations = {
                 },
                 {
                     id: 3,
-                    image: "/our project/lgf-dJo464zJORu69Z8j.avif",
+                    image: "/portfolio/wedding.jpeg",
                     title: "تنسيق حفلات الزفاف",
                     description: "تعكس مشاريعنا في تنسيق حفلات الزفاف الإبداع والأناقة، مما يضمن أن يكون يومكم الخاص لا يُنسى مع تصاميم مذهلة مصممة خصيصاً لتناسب رؤيتكم وتفضيلاتكم.",
                     experience_title: "أناقة",

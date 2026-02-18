@@ -1,7 +1,5 @@
 .gallery-section {
     background-color: var(--color-surface);
-    background-image: var(--pattern-premium);
-    background-size: var(--pattern-size);
 }
 
 .gallery-grid {

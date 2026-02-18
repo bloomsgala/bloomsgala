@@ -18,7 +18,7 @@ const Promo = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <img
-                            src="/our project/1j-mxB7Z7Kkr8u2MaXo.avif"
+                            src="/portfolio/wedding.jpeg"
                             alt="Making Your Events Unforgettable"
                         />
                     </motion.div>
