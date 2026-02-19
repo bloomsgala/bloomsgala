@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Instagram } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import './Hero.css';
 
@@ -66,6 +66,9 @@ const Hero = () => {
                     </a>
                     <a href="https://www.snapchat.com/@bloomsgala?share_id=n4lDWKueARk&locale=en-GB" target="_blank" rel="noopener noreferrer" aria-label="Snapchat">
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.005 0C8.303 0 5.483 2.058 5.483 5.378c0 .878.225 1.62.593 2.275.295.52.502.95.502 1.353 0 .428-.216.732-1.076 1.096C3.996 10.78 3 11.536 3 12.822c0 .903.62 1.48 1.554 1.956.404.18.66.33.66.52 0 .15-.178.272-1.082.903-.79.55-1.922 1.34-1.922 2.76 0 2.264 4.31 3.038 9.8 3.038 5.61 0 9.805-.615 9.805-3.04 0-1.42-1.134-2.208-1.924-2.76-.902-.63-1.08-.752-1.08-.902 0-.214.28-.35.666-.527.934-.44 1.523-1.028 1.523-1.95 0-1.31-1.01-2.05-2.522-2.72-.862-.366-1.078-.67-1.078-1.097 0-.404.207-.833.502-1.353.37-.655.594-1.397.594-2.275C20.528 2.058 17.708 0 14.008 0h-2.003z" /></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/blooms-gala/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <Linkedin size={20} />
                     </a>
                 </motion.div>
             </motion.div>
